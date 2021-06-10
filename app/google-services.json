@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "729699538601",
+    "project_id": "baseball-stats-23311",
+    "storage_bucket": "baseball-stats-23311.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729699538601:android:0570dd5209c37ed3e9bbb8",
+        "android_client_info": {
+          "package_name": "com.mathgeniusguide.baseballstats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729699538601-hj37q1c8gpvviej23gs084dlnr4j0q70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO4BeJzEhBcqOe1vSb1kizcwofXJOxn0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729699538601-hj37q1c8gpvviej23gs084dlnr4j0q70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

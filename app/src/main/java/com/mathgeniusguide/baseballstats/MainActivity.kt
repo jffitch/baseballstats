@@ -39,11 +39,6 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
     val TAG = "Quick Notes"
     val ANONYMOUS = "anonymous"
     lateinit var navController: NavController
-    var noteList = emptyList<Note>().toMutableList()
-    var noteListSelected = emptyList<Note>().toMutableList()
-    var noteSelected = Note.create()
-    var tagList = emptyList<Tag>().toMutableList()
-    var searchDescription = ""
     var firebaseLoaded: MutableLiveData<Boolean> = MutableLiveData()
 
     // Firebase variables
@@ -82,13 +77,6 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         tabs.setupWithNavController(navController)
 
         tabs.setOnNavigationItemSelectedListener {
-            if (it.itemId == R.id.note) {
-                noteSelected = Note.create()
-                noteSelected.id = ""
-                noteSelected.tags = ""
-                noteSelected.time = ""
-                noteSelected.content = ""
-            }
             it.onNavDestinationSelected(navController)
         }
 
@@ -142,7 +130,8 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
     }
 
     private fun addDataToList(dataSnapshot: DataSnapshot) {
-        val notes = dataSnapshot.child(Constants.NOTES).child(firebaseUser?.uid ?: ANONYMOUS).children.iterator()
+        /*
+        val notes = dataSnapshot.child(firebaseUser?.uid ?: ANONYMOUS).child(Constants.NOTES).children.iterator()
         noteList.clear()
         tagList.clear()
         while (notes.hasNext()) {
@@ -163,6 +152,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         tagList.sortBy { it.id }
         noteList.sortByDescending { it.time }
         firebaseLoaded.postValue(true)
+         */
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

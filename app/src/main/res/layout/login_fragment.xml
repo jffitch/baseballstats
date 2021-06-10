@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        style="@style/login_edittexts"
+        android:text=""
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:id="@+id/emailET"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        style="@style/login_edittexts"
+        android:text=""
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:id="@+id/passwordET"
+        app:layout_constraintTop_toBottomOf="@id/emailET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        style="@style/login_edittexts"
+        android:text=""
+        android:hint="@string/username"
+        android:id="@+id/usernameET"
+        app:layout_constraintTop_toBottomOf="@id/passwordET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        style="@style/login_edittexts"
+        android:text=""
+        android:hint="@string/reenter_password"
+        android:inputType="textPassword"
+        android:id="@+id/reenterET"
+        app:layout_constraintTop_toBottomOf="@id/usernameET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        style="@style/login_buttons"
+        android:text="@string/new_user"
+        android:id="@+id/newUserBU"
+        app:layout_constraintTop_toBottomOf="@id/reenterET"
+        app:layout_constraintStart_toStartOf="@id/reenterET"
+        app:layout_constraintEnd_toStartOf="@id/loginBU" />
+
+    <Button
+        style="@style/login_buttons"
+        android:text="@string/login"
+        android:id="@+id/loginBU"
+        app:layout_constraintTop_toBottomOf="@id/reenterET"
+        app:layout_constraintStart_toEndOf="@id/newUserBU"
+        app:layout_constraintEnd_toEndOf="@id/reenterET" />
+
+    <Button
+        style="@style/login_buttons"
+        android:layout_width="wrap_content"
+        android:text="@string/forgot_password"
+        android:id="@+id/forgotBU"
+        app:layout_constraintTop_toBottomOf="@id/newUserBU"
+        app:layout_constraintStart_toStartOf="@id/reenterET"
+        app:layout_constraintEnd_toEndOf="@id/loginBU" />
+
+    <com.google.android.gms.common.SignInButton
+        style="@style/login_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/forgotBU"
+        app:layout_constraintStart_toEndOf="@id/facebookBU"
+        app:layout_constraintEnd_toEndOf="@id/loginBU"
+        android:id="@+id/googleBU"/>
+
+    <com.facebook.login.widget.LoginButton
+        style="@style/login_buttons"
+        android:id="@+id/facebookBU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/forgotBU"
+        app:layout_constraintStart_toStartOf="@id/newUserBU"
+        app:layout_constraintEnd_toStartOf="@id/googleBU" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

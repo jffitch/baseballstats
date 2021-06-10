@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+    <action android:id="@+id/action_logout"
+        app:destination="@id/login"
+        app:enterAnim="@anim/push_left_in"
+        app:exitAnim="@anim/push_left_out" />
+    <fragment android:id="@+id/game"
+        android:name="com.mathgeniusguide.baseballstats.ui.GameFragment"
+        android:label="@string/game"
+        tools:layout="@layout/game_fragment">
+    </fragment>
+    <fragment android:id="@+id/stats"
+        android:name="com.mathgeniusguide.baseballstats.ui.StatsFragment"
+        android:label="@string/stats"
+        tools:layout="@layout/stats_fragment">
+    </fragment>
+    <fragment android:id="@+id/history"
+        android:name="com.mathgeniusguide.baseballstats.ui.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/history_fragment">
+    </fragment>
+    <fragment android:id="@+id/instructions"
+        android:name="com.mathgeniusguide.baseballstats.ui.InstructionsFragment"
+        android:label="@string/instructions"
+        tools:layout="@layout/instructions_fragment">
+    </fragment>
+    <fragment android:id="@+id/settings"
+        android:name="com.mathgeniusguide.baseballstats.ui.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment">
+    </fragment>
+    <fragment android:id="@+id/login"
+        android:name="com.mathgeniusguide.baseballstats.ui.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/login_fragment">
+        <action android:id="@+id/action_login"
+            app:destination="@id/game"
+            app:enterAnim="@anim/push_left_in"
+            app:exitAnim="@anim/push_left_out" />
+    </fragment>
+</navigation>

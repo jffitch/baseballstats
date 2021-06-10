@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">Baseball Stats</string>
+
+    <!-- Login Screen -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="reenter_password">Reenter Password</string>
+    <string name="new_user">New User</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_account">New Account</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="password_reset_email_sent">Password Reset Email Sent</string>
+
+    <!-- Navigation -->
+    <string name="game">Game</string>
+    <string name="history">History</string>
+    <string name="instructions">Instructions</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="settings">Settings</string>
+    <string name="stats">Stats</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <!-- Alerts -->
+    <string name="logout_alert">Are you sure you want to log out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Error Messages -->
+    <string name="fields_empty">Please fill in all fields.</string>
+    <string name="email_required">Email is required.</string>
+    <string name="email_password_required">Email and Password are required.</string>
+    <string name="passwords_must_match">Passwords must match.</string>
+    <string name="email_displayname_password_reenter_required">Email, Display Name, Password, and Reenter Password are required.</string>
+    <string name="invalid_email">Invalid Email</string>
 </resources>
